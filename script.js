@@ -8,8 +8,8 @@ function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
   };
-let game = function () {
-    let start = confirm('Привет! Сыграем в отгадай число?)');
+let start = confirm('Привет! Сыграем в отгадай число?)');
+let game = function () {    
     alert(' Я загадываю целое число от 1 до 100. Удачи!');
         let number = randomInteger(1, 100); 
         //указываю значения потому хотел попробовать спрашивать у пользователя диапазон чисел из которого он будет угадывать. 
@@ -30,8 +30,7 @@ let game = function () {
                 }else if(userNumber === number) {
                 let a = confirm('Молодец! Ты выиграл! Cыграем еще?');
                 if(a){
-                    alert(' Я загадываю целое число от 1 до 100. Удачи!');
-                    ask();
+                    game();
                 }
                 else{
                     alert('Спасибо за игру! Хочешь сыграть еще, обнови страницу!)');
